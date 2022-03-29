@@ -39,13 +39,15 @@ func main() {
 	broker := "e3bf5354fb5b4387842a9f321488d533.s2.eu.hivemq.cloud" // le serveur mqtt sur le cloud azure
 	port := "8883"                                                  // le port tls
 	topic := "balance"                                              // le nom du topic
+	user := "XXX"
+	password := "XXX"
 
 	// Les paramètres de connections
 	opts := MQTT.NewClientOptions()
 	opts.AddBroker(fmt.Sprintf("ssl://%s:%s", broker, port))
 	opts.SetClientID("macbook")
-	opts.SetUsername("dgoosse")
-	opts.SetPassword("CLwxs@SYzVv2gqx")
+	opts.SetUsername(user)
+	opts.SetPassword(password)
 	opts.SetDefaultPublishHandler(msgHandler)
 	tlsConfig := NewTlsConfig()
 	opts.SetTLSConfig(tlsConfig)
