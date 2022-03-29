@@ -45,7 +45,7 @@ func main() {
 	// Les paramètres de connections
 	opts := MQTT.NewClientOptions()
 	opts.AddBroker(fmt.Sprintf("ssl://%s:%s", broker, port))
-	opts.SetClientID("macbook")
+	opts.SetClientID("macbook") // doit rester le même pour éviter de consommmer des sessions sur le cloud
 	opts.SetUsername(user)
 	opts.SetPassword(password)
 	opts.SetDefaultPublishHandler(msgHandler)
