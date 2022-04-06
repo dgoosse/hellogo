@@ -16,9 +16,9 @@ import (
 // Le message json envoyé par la balance
 type Msg struct {
 	Id        string  `json:"id"`        // l'ID de la balance
-	Count     int32   `json:"count"`     // Un compteur d'envois
-	Rssi      int8    `json:"rssi"`      // le qualité du wifi lors du push vers le cloud MQTT
-	Delta     int32   `json:"delta"`     // Difference entre le nouveau poids et l'ancien
+	Count     int32   `json:"count"`     // un compteur d'envois
+	Rssi      int8    `json:"rssi"`      // la qualité du wifi lors du push vers le cloud MQTT
+	Delta     int32   `json:"delta"`     // difference entre le nouveau poids et l'ancien
 	Timestamp int32   `json:"timestamp"` // le timestamp unix en secondes
 	Weight    float32 `json:"weight"`    // le poids de la balance en Kg
 	Battery   float32 `json:"battery"`   // le niveau de la batterie en Volts
