@@ -66,7 +66,7 @@ func main() {
 	}
 
 	// Crée un message de test
-	bytes := []byte(`{"id":"B1","timestamp":1648557797,"weight":68.02,"temperature":22,"humidity":45,"battery":4.2}`)
+	bytes := []byte(`{"id":"B2","count":39,"rssi":96,"delta":0.000458,"timestamp":1649246763,"weight":11.0,"battery":4.2}`)
 
 	// Publie le message de test sur le topic balance
 	token := client.Publish(topic, 0, false, bytes)
