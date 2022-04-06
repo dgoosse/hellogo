@@ -15,12 +15,13 @@ import (
 
 // Le message json envoyé par la balance
 type Msg struct {
-	Id          string  `json:"id"`          // l'ID de la balance
-	Timestamp   int32   `json:"timestamp"`   // le timestamp unix en secondes
-	Weight      float32 `json:"weight"`      // le poids de la balance en Kg
-	Temperature int32   `json:"temperature"` // la temperature à l'intérieur du boitier en °C
-	Humidity    int32   `json:"humidity"`    // le taux d'humidité relative à l'intérieur du boitier en %
-	Battery     float32 `json:"battery"`     // le niveau de la batterie en Volts
+	Id        string  `json:"id"`        // l'ID de la balance
+	Count     int32   `json:"count"`     // Un compteur d'envois
+	Rssi      int8    `json:"rssi"`      // le qualité du wifi lors du push vers le cloud MQTT
+	Delta     int32   `json:"delta"`     // Difference entre le nouveau poids et l'ancien
+	Timestamp int32   `json:"timestamp"` // le timestamp unix en secondes
+	Weight    float32 `json:"weight"`    // le poids de la balance en Kg
+	Battery   float32 `json:"battery"`   // le niveau de la batterie en Volts
 }
 
 // callback handler = ici tu recevra le message posté par la balance

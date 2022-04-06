@@ -1,8 +1,9 @@
 {
-    "id": "B1",
-    "timestamp": "1648557797",
-    "weight": 44.22,
-    "temperature": 22,
-    "humidity": 45,
-    "battery": 4.4
+    "id": "B2",
+    "count": 39,
+    "rssi": 96,
+    "delta": 0.000458,
+    "timestamp": 1649246763,
+    "weight": 11.0,
+    "battery": 4.2
 }
