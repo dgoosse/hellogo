@@ -18,8 +18,8 @@ type Msg struct {
 	Id        string  `json:"id"`        // l'ID de la balance
 	Count     int32   `json:"count"`     // un compteur d'envois
 	Rssi      int8    `json:"rssi"`      // la qualité du wifi lors du push vers le cloud MQTT
-	Delta     int32   `json:"delta"`     // difference entre le nouveau poids et l'ancien
 	Timestamp int32   `json:"timestamp"` // le timestamp unix en secondes
+	Delta     float32 `json:"delta"`     // difference entre le nouveau poids et l'ancien
 	Weight    float32 `json:"weight"`    // le poids de la balance en Kg
 	Battery   float32 `json:"battery"`   // le niveau de la batterie en Volts
 }
@@ -66,7 +66,7 @@ func main() {
 	}
 
 	// Crée un message de test
-	bytes := []byte(`{"id":"B2","count":39,"rssi":96,"delta":0.000458,"timestamp":1649246763,"weight":11.0,"battery":4.2}`)
+	bytes := []byte(`{"id":"B2","count":3,"rssi":96,"timestamp":1649259689,"delta":0.005164,"weight":11.0,"battery":4.2}`)
 
 	// Publie le message de test sur le topic balance
 	token := client.Publish(topic, 0, false, bytes)
